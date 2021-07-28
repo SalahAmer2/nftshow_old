@@ -20,3 +20,21 @@
     transition: filter 0.3s ease-in-out 0s;
     filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 5px 8px);
 }
+
+.divContainVid {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.preloader {
+    width: 100%;
+    left: 0;
+    top: 40%;
+    margin-left: 0;
+    text-align: center;
+}
