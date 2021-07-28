@@ -1,7 +1,7 @@
 import React from 'react';
-import { Switch, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MainContainer from "./components/MainContainer";
+import Footer from "./components/Footer";
 import './App.css';
 
 const App = () => {
@@ -16,8 +16,8 @@ const App = () => {
         </div>
 
         <div id="top"></div>  {/* top */}
-        <Navbar />        
-        <MainContainer />
+            <Navbar />        
+            <MainContainer />
 
             <section id="cta2" className="big bg-dark-shadow mt-100">
                 <div className="container text-center">
@@ -25,25 +25,10 @@ const App = () => {
                     <p className="w-50 m-x-auto mb-0">NFTShow does not own neither the smart contract nor the NFTs featured on this website. We only act as an escrow service for duration of auctions. By placing a bid on auctions in this website, you agree to our terms {'&'} conditions </p>
                 </div>{/* container */}
             </section>
-        </div> {/* main-container */}
+        </div>
 
-        <footer>
-            <div className="container">
-                <div className="row v-center mobile-center">
-                    <div className="col-md-4 footer-left-area tablet-top">
-                        <p>© NFTShow by Mondoir</p>
-                    </div>{/* footer-left-area */}
-                    <div className="col-md-8 footer-right-area">
-                        <p>
-                            <a href="/" className="text-link mr-15">Home</a>
-                            <a href="termsAndConditions.html" className="text-link mr-15">Terms & Conditions</a>
-                            <a href="privacyPolicy.html" className="text-link mr-15">Privacy Policy</a>
-                            <a href="contact.html" className="text-link">Contact</a>
-                        </p>
-                    </div>{/* footer-right-area */}
-                </div>{/* row */}
-            </div>{/* container */}
-        </footer>
+        <Footer />
+
         {/* modal */}
         <div className="modal fade login-modal" tabIndex={-1} role="dialog" data-backdrop="static" data-keyboard="false">
             <div className="modal-dialog modal-dialog-centered modal-sm">
