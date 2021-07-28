@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from "./components/Navbar";
 import MainContainer from "./components/MainContainer";
+import MainContainerAuction from "./components/MainContainerAuction";
 import Footer from "./components/Footer";
 import './App.css';
 
 const App = () => {
+
+    const [goToAuctionBool, setGoToAuctionBool] = useState<boolean>(false)
+
   return (
     <div className="App">
         <div>
@@ -16,8 +20,9 @@ const App = () => {
         </div>
 
         <div id="top"></div>  {/* top */}
-            <Navbar />        
-            <MainContainer />
+            <Navbar />  
+
+            { goToAuctionBool ? <MainContainerAuction /> : <MainContainer setGoToAuctionBool={setGoToAuctionBool}/> }
 
             <section id="cta2" className="big bg-dark-shadow mt-100">
                 <div className="container text-center">

@@ -1,10 +1,14 @@
 import React from 'react'
 import ViewLink from "./ViewLink";
 
-const MainContainer = () => {
+const MainContainer = ({setGoToAuctionBool}) => {
+
+    const handleClick = (): void => {
+        setGoToAuctionBool(true);
+    }
+
     return (
-        <div>
-            <div className="main-container">
+        <div className="main-container">
 
             <section id="components" className=" pb-0">
                 <div className="container">
@@ -29,7 +33,7 @@ const MainContainer = () => {
                                     </p>
                                 </div>
                                 <div className="col-lg-6 text-right">
-                                    <a href="item-details.html" className="btn btn-sm btn-outline-primary"><i className="fas fa-gavel mr-5"></i> Go to auction...</a>
+                                    <span onClick={handleClick} className="btn btn-sm btn-outline-primary"><i className="fas fa-gavel mr-5"></i> Go to auction...</span>
                                 </div>
                             </div>
                             
@@ -50,10 +54,8 @@ const MainContainer = () => {
                 </div>{/* container */}
             </section>
 
-
-            </div>{/* container */}
         </div>
     )
 }
 
-export default MainContainer
+export default MainContainer;
