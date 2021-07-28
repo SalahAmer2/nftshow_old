@@ -17,12 +17,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "module": "commonjs",
+    "module": "esnext",
     "noResolve": false,
     "noImplicitAny": false,
     "removeComments": true,
     "sourceMap": true,
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": [
     "src"
