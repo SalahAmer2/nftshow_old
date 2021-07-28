@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import logo from '../assets/images/logo.png';
 import './App.css';
 
 function App() {
@@ -13,8 +15,9 @@ function App() {
 
       <div id="top"></div>  {/* top */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
-    <div className="container">
-        <a className="navbar-brand" href="#x"><img src="assets/images/logo.png" alt=""></a>
+      <div className="container">
+        <Link className="navbar-brand" to="#x"><img src={logo} alt="image not found" /></Link>
+        {/* <a className="navbar-brand" href="#x"><img src="assets/images/logo.png" alt=""></a> */}
 
         <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-toggle-nav-center" aria-controls="navbar-toggle-nav-center" aria-expanded="false" aria-label="Toggle navigation">
             <span className="icon-bar top-bar"></span>
