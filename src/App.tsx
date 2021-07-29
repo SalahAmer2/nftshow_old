@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
+ import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Homepage from "./components/Homepage";
 import MainContainer from "./components/MainContainer";
 import MainContainerAuction from "./components/MainContainerAuction";
+import Past_Drops from "./components/Past_Drops";
 import Footer from "./components/Footer";
 import './App.css';
 
@@ -21,8 +24,10 @@ const App = () => {
 
         <div id="top"></div>  {/* top */}
             <Navbar />  
-
-            { goToAuctionBool ? <MainContainerAuction /> : <MainContainer setGoToAuctionBool={setGoToAuctionBool}/> }
+            <Switch>
+                <Route exact path='/' component={ Homepage } />
+                <Route path='/past_drops' component={Past_Drops} />
+            </Switch>
 
             <section id="cta2" className="big bg-dark-shadow mt-100">
                 <div className="container text-center">

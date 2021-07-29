@@ -19,13 +19,13 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbar-toggle-nav-center">
                         <ul className="navbar-nav m-auto">
                             <li className="nav-item">
-                                <a className="nav-link active" href="#x">Current Drop</a>
+                                <Link className="nav-link active" to="/">Current Drop</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#x">Past Drops</a>
+                                <Link className="nav-link" to="/past_drops">Past Drops</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#x">Consign</a>
+                                <Link className="nav-link" to="#x">Consign</Link>
                             </li>
                         </ul>{/* navbar-nav */}
 
